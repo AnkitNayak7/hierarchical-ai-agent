@@ -1,4 +1,4 @@
-﻿name: Deploy to Cloud Run
+name: Deploy to Cloud Run
 
 on:
   push:
@@ -31,8 +31,8 @@ jobs:
           docker push ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO }}/${{ env.SERVICE }}
 
       - run: |
-          gcloud run deploy ${{ env.SERVICE }} `
-            --image ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO }}/${{ env.SERVICE }} `
-            --region ${{ env.REGION }} `
-            --platform managed `
+          gcloud run deploy ${{ env.SERVICE }} \
+            --image ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO }}/${{ env.SERVICE }} \
+            --region ${{ env.REGION }} \
+            --platform managed \
             --allow-unauthenticated
