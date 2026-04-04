@@ -13,6 +13,7 @@ wheels/
 .adk/
 *.pyc
 uv.lock
+key.json
 
 # External repositories
 advent-of-agents/
