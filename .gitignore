@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+*.pyc
+
+# Virtual environments
+.venv
+.env
+.adk/
+*.pyc
+uv.lock
+
+# External repositories
+advent-of-agents/
+SUBMISSION_TEMPLATE.md
